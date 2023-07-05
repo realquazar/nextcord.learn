@@ -14,3 +14,5 @@ bot = AutoShardedBot(shard_count=20, command_prefix=">", intents=nextcord.Intent
 @bot.event
 async def on_ready():
     print("Bot is online")
+
+bot.run("TOKEN")
