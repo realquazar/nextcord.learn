@@ -1,3 +1,7 @@
+'''
+Records each message sent by the user and displays it
+'''
+
 import nextcord
 from nextcord.ext import commands
 
