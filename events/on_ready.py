@@ -1,3 +1,7 @@
+'''
+Notifies when the bot is online or running
+'''
+
 import nextcord
 from nextcord.ext import commands
 
