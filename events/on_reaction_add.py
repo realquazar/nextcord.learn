@@ -1,3 +1,7 @@
+'''
+Records the user who reacted and the emoji that they have interacted with
+'''
+
 import nextcord
 from nextcord.ext import commands
 
