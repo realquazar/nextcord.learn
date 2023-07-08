@@ -1,3 +1,7 @@
+'''
+Records the deleted messages content and displays it
+'''
+
 import nextcord
 from nextcord.ext import commands
 
