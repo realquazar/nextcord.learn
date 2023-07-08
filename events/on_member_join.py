@@ -1,3 +1,7 @@
+'''
+Greets a member when they join the server
+'''
+
 import nextcord
 from nextcord.ext import commands
 
