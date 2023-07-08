@@ -1,3 +1,7 @@
+'''
+Records the edited message content and displays the original message and the edited message
+'''
+
 import nextcord
 from nextcord.ext import commands
 
