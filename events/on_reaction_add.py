@@ -1,5 +1,5 @@
 '''
-Records the user who reacted and the emoji that they have interacted with and sends a message
+Records the user who reacted along with the emoji that they have interacted with and sends a message
 '''
 
 import nextcord
