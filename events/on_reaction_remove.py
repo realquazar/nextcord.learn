@@ -1,3 +1,7 @@
+'''
+Records the user who removed their reaction along with the emoji and sends a message
+'''
+
 import nextcord
 from nextcord.ext import commands
 
