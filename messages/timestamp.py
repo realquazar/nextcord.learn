@@ -1,6 +1,7 @@
 import nextcord
 from nextcord.ext import commands
-from datetime import datetime
+from datetime import datetime, timedelta
+import humanfriendly
 
 intents = nextcord.Intents.default()
 intents.typing = False
@@ -15,10 +16,9 @@ async def on_ready():
 @bot.command()
 async def timestamp(ctx, *, time):
     try:
-        converted_time = datetime.strptime(time, '%Y-%m-%d %H:%M:%S')
-        timestamp = converted_time.timestamp()
-        await ctx.send(f'Timestamp for {time}: {timestamp}')
+        read_time = humanfriendly.parse_timespan(time) 
+        end_time = nextcord.utils.utcnow().timestamp() + read_time
     except ValueError:
-        await ctx.send('Invalid time format. Please provide time in the format: YYYY-MM-DD HH:MM:SS')
+        await ctx.send(f"Ends in <t:{int(end_time)}:R> <t:{int(end_time)}:T> ")
 
 bot.run("TOKEN")
