@@ -1,5 +1,5 @@
 '''
-In this code we add a role
+In this code we create a thread
 '''
 
 import nextcord
