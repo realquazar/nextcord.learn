@@ -1,5 +1,7 @@
 import nextcord
 from nextcord.ext import commands
+import datetime
+import humanfriendly
 
 intents=nextcord.Intents.default()
 intents.members = True
