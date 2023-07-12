@@ -10,18 +10,13 @@ bot = commands.Bot(command_prefix=">", intents=intents)
 async def on_ready():
     print(f"Online {bot.user}")
 
-@bot.command()
-@commands.has_permissions(manage_roles=True)
-async def mute(ctx, member: nextcord.Member, duration: int, *, reason: str):
-    muted_role = nextcord.utils.get(ctx.guild.roles, name="muted")
-    if not muted_role:
-        muted_role = await ctx.guild.create_role(name="muted")
-
-    await member.add_roles(muted_role)
-    await ctx.send(f"{member.mention} has been muted for {duration} because: {reason}
-    
-    await asyncio.sleep(duration)
-    await member.edit(mute=True)
+@client.command(name='mute', description='Mutes a user for a given amount of time')
+@commands.has_permissions(moderate_members=True)
+async def mute(ctx, user: nextcord.Member, time, reason):
+    timeSeconds = humanfriendly.parse_timespan(time)
+    await ctx.send(f'{user} has been muted successfully.')
+    await user.edit(timeout=nextcord.utils.utcnow() + datetime.timedelta(seconds=timeSeconds))
+    await user.send(f'You have been muted in {ctx.guild.name} by {ctx.author} for {time} for {reason}')
 
 bot.run("TOKEN")
     
