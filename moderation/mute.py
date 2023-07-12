@@ -10,7 +10,7 @@ bot = commands.Bot(command_prefix=">", intents=intents)
 async def on_ready():
     print(f"Online {bot.user}")
 
-@client.command(name='mute', description='Mutes a user for a given amount of time')
+@bot.command(name='mute', description='Mutes a user for a given amount of time')
 @commands.has_permissions(moderate_members=True)
 async def mute(ctx, user: nextcord.Member, time, reason):
     timeSeconds = humanfriendly.parse_timespan(time)
