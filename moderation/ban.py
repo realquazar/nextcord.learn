@@ -1,3 +1,7 @@
+'''
+In this code we ban a user
+'''
+
 import nextcord
 from nextcord import commands
 
@@ -11,6 +15,7 @@ async def on_ready():
     print(f"Online {bot.user}")
 
 @bot.command()
+@commands.has_permissions(ban_members=True)
 async def ban(ctx, member: nextcord.Member, *, reason: str):
     if reason:
         await member.ban(reason=reason)
