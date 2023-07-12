@@ -22,4 +22,6 @@ async def mute(ctx, member: nextcord.Member, duration: int, *, reason: str):
     
     await asyncio.sleep(duration)
     await member.edit(mute=True)
+
+bot.run("TOKEN")
     
