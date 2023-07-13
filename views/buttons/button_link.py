@@ -11,7 +11,7 @@ class MyView(View):
         super().__init__()
         
     @nextcord.ui.button(label='OpenAI Website', style=nextcord.ButtonStyle.link, url='https://link_here')
-    async def openai_button(self, button: nextcord.ui.Button, interaction: nextcord.Interaction):
+    async def link_button(self, button: nextcord.ui.Button, interaction: nextcord.Interaction):
         pass
 
 bot = commands.Bot(command_prefix=">", intents=nextcord.Intents.all())
