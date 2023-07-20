@@ -1,5 +1,5 @@
 '''
-In this code we display all the roles of the member by looping through "ctx.author.roles" or "member.roles" stored as the roles varaible
+In this code we display all the roles of the member by looping through "ctx.author.roles" or "member.roles" stored as the roles variable
 in this code with the help of list comprehension
 '''
 
