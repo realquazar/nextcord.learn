@@ -1,3 +1,7 @@
+'''
+In this code we get the guild id of the user who interacted or ran the command
+'''
+
 import nextcord
 from nextcord.ext import commands
 
