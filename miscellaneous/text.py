@@ -1,5 +1,6 @@
 '''
-In this code we generate the message by displaying each character individually by looping through the message
+In this code we generate the message by displaying each character individually by looping through the message and editing the previous 
+content of the string
 '''
 
 import nextcord
